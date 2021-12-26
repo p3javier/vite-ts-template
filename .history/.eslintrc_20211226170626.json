@@ -1,0 +1,77 @@
+{
+  "env": {
+    "browser": false,
+    "es2020": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
+  },
+  "plugins": [
+    "react",
+    "testing-library",
+    "jest-dom",
+    "jest",
+    "prettier",
+    "import"
+  ],
+  "parser": "@babel/eslint-parser",
+  "rules": {
+    "accessor-pairs": "error",
+    "array-callback-return": "error",
+    "arrow-spacing": [
+      "error",
+      {
+        "after": true,
+        "before": true
+      }
+    ],
+    "block-scoped-var": "error",
+    "class-methods-use-this": ["error", { "exceptMethods": ["render"] }],
+    "complexity": "error",
+    "consistent-return": ["error", { "treatUndefinedAsUnspecified": true }],
+    "eqeqeq": "error",
+    "func-name-matching": "error",
+    "guard-for-in": "error",
+    "id-length": ["warn", { "exceptions": ["t", "e", "i"] }],
+    "indent": ["off", 2, { "SwitchCase": 1 }],
+    "init-declarations": "error",
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "double", { "avoidEscape": true }],
+    "semi": ["error", "always"],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "prettier/prettier": "error"
+  },
+  "globals": {
+    "document": "readonly",
+    "window": "readonly",
+    "Blob": "readonly",
+    "Request": "readonly",
+    "fetch": "readonly",
+    "Headers": "readonly",
+    "Storage": "writable",
+    "localStorage": "writable",
+    "navigator": "readonly",
+    "Worker": "readonly",
+    "self": "readonly"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
